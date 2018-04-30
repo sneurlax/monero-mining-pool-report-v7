@@ -13,7 +13,7 @@
 % \date{May 2018}
 \author{sneurlax \\
 \textless\url{sneurlax@gmail.com}\textgreater \\
-(\url{https://github.com/sneurlax)}}
+(\url{https://github.com/sneurlax})}
 
 \begin{document}
 \maketitle
@@ -21,7 +21,7 @@
 
 \section*{Abstract}
 
-This is an overview of Monero v7 mining pools with a current example of degraded privacy in one of Monero's privacy layers due to poor practices on the part of mining pools, a report on mitigation strategies including submissions to the blackball database, and a request for comments on best practices or solutions going forward.  This report applies to Monero mainnet version 7 (v7) and showcases degraded privacy due to publicly-available metadata: mining pools' announced finds (blocks) and payments (transactions.)  Mining pools are recommended to improve "privacy by obscurity" by disclosing less information publicly, but simple practices are presented in order to allow mining pools to proactively improve their privacy while maintaining their current level of metadata disclosure.
+This is an overview of Monero version 7 mining pools with a current example of degraded privacy in one of Monero's privacy layers due to poor practices on the part of mining pools, a report on mitigation strategies including submissions to the blackball database, and a request for comments on best practices or solutions going forward.  This report applies to Monero mainnet version 7 (v7) and showcases degraded privacy due to publicly-available metadata: mining pools' announced finds (blocks) and payments (transactions.)  Mining pools are recommended to improve "privacy by obscurity" by disclosing less information publicly, but simple practices are presented in order to allow mining pools to proactively improve their privacy while maintaining their current level of metadata disclosure.
 
 \clearpage
 
@@ -31,7 +31,7 @@ This is an overview of Monero v7 mining pools with a current example of degraded
 
 \setcounter{page}{1}
 
-As of Monero v7 (which began at block height 1546000,) a majority of the Monero hashrate is attributable to particular mining pools and there are seven or eight public pools with over 1\% of the total global hashrate.  These pools advertise various statistics---metadata---including the blocks that they have mined, and all but one pool (Nanopool) list the payouts that they have made to their miners.\footnote{Nanopool does not directly announce all of their payments, but still does announce enough information to identify some of their transactions.  What portion of their total payments are attributable is not known at this time and is a topic for future work.}  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
+As of Monero version 7 (\verb/v7/, which began at block height 1546000,\footnote{\href{https://github.com/monero-project/monero/blob/93e76e14a205a84cbea8ab0a3e35f37bf9d08b42/src/cryptonote_core/blockchain.cpp\#L111}{monero/src/cryptonote\_core/blockchain.cpp v0.12.0.0, line 111.}}) a majority of the Monero hashrate is attributable to particular mining pools and there are seven or eight public pools with over 1\% of the total global hashrate.  These pools advertise various statistics---metadata---including the blocks that they have mined, and all but one pool (Nanopool) list the payouts that they have made to their miners.\footnote{Nanopool does not directly announce all of their payments, but still does announce enough information to identify some of their transactions.  What portion of their total payments are attributable is not known at this time and is a topic for future work.}  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
 
 \subsection{Monero's privacy protections}
 

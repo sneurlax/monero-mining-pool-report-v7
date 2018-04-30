@@ -62,3 +62,6 @@ Pool operators: either announce less information *or* churn prior to paying out 
      - v7 fork height & date
      - List specific pools
      - Monero hashrate distribution & attributability
+ - Meta
+     - "Contributing" section
+     - PDF build instructions

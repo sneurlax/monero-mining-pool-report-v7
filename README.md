@@ -6,8 +6,8 @@ An overview of Monero v7 mining pools with a current example of degraded privacy
 
 ###### Formatting note
 
-This report's final format will be LaTeX (see `monero-v7-mining-pool-report.tex` and its PDF output, `monero-v7-mining-pool-report.pdf`,) but this README is in Markdown format.  The report's text will be finished and refined here in Markdown format first and migrated to LaTeX in its final versions for final presentation.
+This report's final format will be LaTeX (see `monero-v7-mining-pool-report.tex` and its PDF output, `monero-v7-mining-pool-report.pdf`,) but this README is in Markdown format.  The report's text will be refined and finished here in Markdown format first and migrated to LaTeX in its final versions for presentation.
 
-###### "Currency" (version) note
+## Introduction
 
-This report applies to Monero mainnet version 7 (v7,) which began at height 1546000.  This is not the seventh version of this report of Monero mining pools, but rather simply a report on the state of Monero mining pools as of Monero mainnet v7.
+

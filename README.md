@@ -28,11 +28,11 @@ Blockchain forks have the potential to degrade the untraceability of ring signat
 
 Mining pools have also been inadvertently revealing the real source of some payments *via* the statistics that they advertise before any blockchain forks incentivized key image reuse.  Mining pools openly announce which outputs are theirs when they announce the blocks that they have found.  When they later announce a transaction that uses one of their outputs as a ring signature member, it is most likely that their output is the real one and known spent.
 
+By identifying an output as real in one transaction, its suitability as a decoy is degraded elsewhere, reducing the effective ring size of other users' ring signatures when included in rings after they are revealed to be known spent.
+
 ### Monero version 7's countermeasures against privacy degradations
 
-By identifying an output as real in one transaction, its suitability as a decoy is degraded elsewhere, reducing the effective ring size of other users' ring signatures.  Several tools were provided by the Monero `v7` upgrade that allow users to avoid or mitigate both of the above potential degradations to their privacy.  For example, users can avoid including any known spent outputs in their own ring signatures by using what is known as the blackball database, which contains every known spent output.
-
-This report presents additional submissions to the blackball database, including explanations of what metadata identifies the real member of a ring, where to collect it, and example code to scrape and analyze the metadata necessary for independent verification of these results.
+Several tools were provided by the Monero `v7` upgrade that allow users to avoid or mitigate both of the above potential degradations to their privacy.  For example, users can avoid including any known spent outputs in their own ring signatures by using what is known as the blackball database, which contains every known spent output.  This report presents additional submissions to the blackball database, including explanations of what metadata identifies the real member of a ring, where to collect it, and example code to scrape and analyze the metadata necessary for independent verification of these results.
 
 ## The State of the Hashrate
 

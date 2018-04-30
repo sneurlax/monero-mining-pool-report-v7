@@ -10,11 +10,11 @@ An overview of Monero version 7 mining pools with a current example of degraded 
 
 ###### Formatting note
 
-This report's final format will be LaTeX (see `monero-v7-mining-pool-report.tex` and its PDF output, `monero-v7-mining-pool-report.pdf`,) but this README is in Markdown format.  The report's text will be refined and finished here in Markdown format first and migrated to LaTeX in its final versions for presentation.
+This report's final format will be LaTeX (see `monero-v7-mining-pool-report.tex` and its PDF output, `monero-v7-mining-pool-report.pdf`,) but this README is in Markdown format.  Footnotes, for example, are rendered here as simple parentheticals.  The report's text will be refined and finished here in Markdown format first and migrated to LaTeX in its final versions for presentation.
 
-## Introduction}
+## Introduction
 
-As of Monero version 7 (`v7`, which began at block height [1546000](https://github.com/monero-project/monero/blob/93e76e14a205a84cbea8ab0a3e35f37bf9d08b42/src/cryptonote_core/blockchain.cpp#L111),) a majority of the Monero hashrate is attributable to particular mining pools and there are seven or eight public pools with over 1% of the total global hashrate.  These pools advertise various statistics--metadata--including the blocks that they have mined, and all but one pool (Nanopool) list the payouts that they have made to their miners (Nanopool does not directly announce all of their payments, but still does announce enough information to identify some of their transactions.  What portion of their total payments are attributable is not known at this time and is a topic for future work.)  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
+As of Monero version 7 (`v7`, which began at block height [1546000](https://github.com/monero-project/monero/blob/93e76e14a205a84cbea8ab0a3e35f37bf9d08b42/src/cryptonote_core/blockchain.cpp#L111),) a majority of the Monero hashrate is attributable to particular mining pools and there are seven or eight public pools with over 1% of the total global hashrate.  These pools advertise various statistics--metadata--including the blocks that they have mined, and all but one pool list the payouts that they have made to their miners.  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
 
 ### Monero's privacy protections
 
@@ -36,7 +36,9 @@ This report presents additional submissions to the blackball database, including
 
 ## The State of the Hashrate
 
-TODO: Describe the current state of Monero mining hashrate distribution, listing pools in descending order of hashrate.
+As of `v7`, a majority of the network hashrate is attributable to public mining pools.  (See the figure below from [http://minexmr.com/pools.html](http://minexmr.com/pools.html); however, independent verification of this information is a topic for future work and is possible as long as mining pools publicly disclose either a reported hashrate or at least their found blocks.)  Nanopool, SupportXMR, mineXMR.com, Mining Pool Hub, F2Pool, MinerGate, DwarfPool, and MoneroHash (the top 8 public Monero pools in descending order of hashrate) represent over 80% of the combined global hashrate.  They all announce enough information to discern some outputs as known spent (all of the pools announce their block finds and all but one, Nanopool, list all of their payments.  Nanopool does not directly announce all of their payments, but still announces enough information to identify some of their outputs as spent, as detailed in the [Nanopool](https://github.com/sneurlax/monero-v7-mining-pool-report#nanopool) section.  What portion of their total payments are attributable is not known at this time and is a topic for future work.)
+
+![Global Monero Mining Network Hashrate Distribution](https://user-images.githubusercontent.com/4107993/39454120-49c38b2a-4c8e-11e8-8b05-1be9323d1985.png)
 
 ### Software centralization
 

@@ -6,7 +6,7 @@ by sneurlax <sneurlax@gmail.com> (https://github.com/sneurlax)
 
 ## Abstract
 
-An overview of Monero version 7 mining pools with a current example of degraded privacy in one of Monero's privacy layers due to poor practices on the part of mining pools and a report on mitigation strategies including submissions to the blackball database.  This report applies to Monero mainnet version 7 (v7) and showcases degraded privacy due to publicly-available metadata: mining pools' announced finds (blocks) and payments (transactions.)  Mining pools are recommended to improve "privacy by obscurity" by disclosing less information publicly, but simple practices are presented in order to allow mining pools to proactively improve their privacy while maintaining the current level of metadata disclosure.
+An overview of Monero mainnet version 7 (`v7`) mining pools with a current example of degraded privacy in one of Monero's privacy layers due to poor practices on the part of mining pools and a report on mitigation strategies including submissions to the blackball database.  This report applies to `v7` and showcases degraded privacy due to publicly-available metadata: mining pools' announced finds (blocks) and payments (transactions.)  Mining pools are recommended to improve "privacy by obscurity" by disclosing less information publicly, but simple practices are presented in order to allow mining pools to proactively improve their privacy while maintaining the current level of metadata disclosure.
 
 ###### Formatting note
 
@@ -14,7 +14,7 @@ This report's final format will be LaTeX (see `monero-v7-mining-pool-report.tex`
 
 ## Introduction
 
-As of Monero version 7 (`v7`, which began at block height [1546000](https://github.com/monero-project/monero/blob/93e76e14a205a84cbea8ab0a3e35f37bf9d08b42/src/cryptonote_core/blockchain.cpp#L111),) a majority of the Monero hashrate is attributable to particular mining pools and there are seven or eight public pools with over 1% of the total global hashrate.  These pools advertise various statistics--metadata--including the blocks that they have mined, and all but one pool list the payouts that they have made to their miners.  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
+As of Monero version 7 (`v7`, which began at block height [1546000](https://github.com/monero-project/monero/blob/93e76e14a205a84cbea8ab0a3e35f37bf9d08b42/src/cryptonote_core/blockchain.cpp#L111),) a majority of the Monero hashrate is attributable to particular mining pools.  There are seven or eight public pools with over 1% of the total global hashrate.  These pools advertise various statistics---metadata---including the blocks that they have mined.  All but one pool also list the payouts that they have made to their miners.  The combination of output ownership and transaction authorship allow the true member of some ring signatures to be inferred beyond a reasonable doubt in some cases, degrading one of Monero's layers of privacy.
 
 ### Monero's privacy protections
 

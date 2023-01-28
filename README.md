@@ -2,11 +2,9 @@
 
 May 2018
 
-by Josue Sneur <jsneur@gmail.com> (https://github.com/jsneur)
-
 ## Abstract
 
-This report applies to Monero mainnet version 7 (`v7`) and showcases degraded privacy due to publicly-available metadata: mining pools' announced blocks and transactions.  Simple practices are presented which allow users and mining pools to proactively maintain privacy without disclosing less metadata.  Submissions are made to the blackball database and sample code is presented for scraping known spent outputs.
+This report applies to Monero mainnet version 7 (`v7`) and showcases degraded privacy due to publicly-available metadata: mining pools' announced blocks and transactions.  Simple practices are presented which allow users and mining pools to proactively maintain privacy without disclosing more metadata.  Submissions are made to the blackball database and sample code is presented for scraping known spent outputs.
 
 ###### Formatting note
 
@@ -34,7 +32,7 @@ Several tools were provided by the Monero `v7` upgrade that allow users to avoid
 
 ### A note on key image reuse and 0-decoy transactions
 
-The impact of reckless key image reuse across blockchains and 0-decoy (0-mixin) transactions negatively impacts the privacy provided by Monero's ring signatures, and can be used in coordination of the known mining pool outputs to create a larger impact on these ring signatures. Monero noted the issues wiht 0-decoy transactions in January 2015 with [`MRL-0004`](https://lab.getmonero.org/pubs/MRL-0004.pdf), and 0-decoy transactions have been prohibited on the network since March 2016. They are no longer a concern with transactions going forward.
+The impact of reckless key image reuse across blockchains and 0-decoy (0-mixin) transactions negatively impacts the privacy provided by Monero's ring signatures, and can be used in coordination of the known mining pool outputs to create a larger impact on these ring signatures. Monero noted the issues with 0-decoy transactions in January 2015 with [`MRL-0004`](https://lab.getmonero.org/pubs/MRL-0004.pdf), and 0-decoy transactions have been prohibited on the network since March 2016. They are no longer a concern with transactions going forward.
 
 Blockchain forks have the potential to degrade the untraceability of ring signatures when key images are reused on both sides of a blockchain fork without taking advantage of any of the tools provided by Monero's `v7` upgrade.  Key images may be safely (at least privately) reused across blockchain forks if care is taken to construct identical rings on both sides of the fork (a process which is outside of the scope of this report but is described in detail [here](https://monero.stackexchange.com/questions/7826/how-can-individuals-safeguard-themselves-and-the-community-against-a-key-reusing).)  If users send funds on both sids of the fork without any such precautions, however, then they will inadvertently produce two rings that share only one member in common, thus identifying the common member as the real source of both transactions.  Such outputs are identified as "known spent."
 
